@@ -1,0 +1,44 @@
+These are the commands that go into the terminal window to test the method testSQL() in the dao
+
+from album import Album
+from albumdao import AlbumDAO
+album = Album('title','artist','releasedate','totaltracks','id')
+dao = AlbumDAO()
+dao.testSQL(album)
+
+from playlist import Playlist
+from playlistdao import PlaylistDAO
+playlist = Playlist('title','16','playlistid','accountid')
+dao = PlaylistDAO()
+dao.updateNumber(playlist)
+
+from track import Track
+from trackdao import TrackDAO
+track = Track('title','artist','duration','trackid','albumid')
+dao = TrackDAO()
+dao.testSQL(track)
+
+from tap import Tap
+from tapdao import TapDAO
+tap = Tap('trackid','accountid','playlistid')
+dao = TapDAO()
+dao.testSQL(tap)
+
+from tal import Tal
+from taldao import TalDAO
+tal = Tal('trackid','accountid','likedtrack')
+dao = TalDAO()
+dao.testSQL(tal)
+
+CREATE TABLE ACCOUNT (email varchar(255), username varchar(255), id varchar(255) PRIMARY KEY)
+
+CREATE TABLE ALBUM (album_id varchar(255), account_id varchar(255), FOREIGN KEY (account_id) REFERENCES ACCOUNT(id), PRIMARY KEY (album_id,account_id))
+
+CREATE TABLE PLAYLIST (playlist_title varchar(255), total_playlist_tracks varchar(255), playlist_id varchar(255) PRIMARY KEY, account_id varchar(255), FOREIGN KEY (account_id) REFERENCES ACCOUNT(id))
+
+CREATE TABLE TAP (track_id varchar(255), account_id varchar(255), FOREIGN KEY (account_id) REFERENCES ACCOUNT(id), playlist_id varchar(255) PRIMARY KEY, FOREIGN KEY (playlist_id) REFERENCES PLAYLIST(playlist_id))
+
+CREATE TABLE TAL (track_id varchar(255), account_id varchar(255), FOREIGN KEY (account_id) REFERENCES ACCOUNT(id), PRIMARY KEY (track_id, account_id))
+
+ALTER TABLE TAL 
+ADD COLUMN liked_tracks boolean

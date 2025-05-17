@@ -1,0 +1,5 @@
+client id:
+f39f1871b646469b98ab1b3aa784b70e
+
+client key:
+8007ef48e29e40e2a7b128a4752e9693
