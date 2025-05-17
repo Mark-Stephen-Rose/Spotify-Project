@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = 'stylesheet'  href = "{{ url_for('static', filename='index.css') }}" />
+    <title>Add Song</title>
+</head>
+<body class="backgroundcolor">
+    <div class="homebody">
+    <h1 class = "centertitle">Add Song To A Playlist</h1>
+    
+    <div class="maincontent">
+    <ul>
+        {% for playlist in playlists %}
+            <li>
+                <div class="playlistBody">
+                <div class="playlistSubject">
+                <!-- ID: {{ playlist.playlist_id }}<br> -->
+                <b>Name:</b> {{ playlist.playlist_title }}<br>
+                <b>Number of Songs:</b> {{ playlist.total_playlist_tracks }}<br>
+                </div>
+                <div class = "playlistGroupButtons">
+                <div class="playlistButtons">
+                <form id="form" action="add_song" method="post">
+                    <input type="hidden"  name="playlistidadd" value="{{ playlist.playlist_id }}" >
+                    <input type="submit"   name="add_to_playlist"   value="Add">
+                </form>
+                </div>
+                </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    </div>
+    </div>
+</body>
+</html>

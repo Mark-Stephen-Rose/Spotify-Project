@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Search Results</title>
+</head>
+<body class="backgroundcolor">
+    <div class="homeBody">
+        <h1 class="centertitle">Search Results</h1>
+        <div class="maincontentSearchSong">
+            <ul>
+                {% for track in tracks %}
+                    <li>
+                        <div class="songBox">
+                            <h3>{{ track['name'] }}</h3>
+                            <p>Artists: 
+                                {% for artist in track['artists'] %}
+                                    {{ artist['name'] }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </p>
+                            <p>Album: {{ track['album']['name'] }}</p>
+                            <p>Duration: {{ track['duration_ms'] // 60000 }} minutes {{ (track['duration_ms'] % 60000) // 1000 }} seconds</p>
+                            <!-- <p>Link to Song: <a href="{{ track.external_urls.get('spotify') }}" target="_blank">Open</a></p> -->
+                            <div class="spotify-player"></div>
+                                <button class="playerbutton" access_token="{{ access_token }}" track_id="{{ track['id'] }}">Play/Pause</button>
+                                <br>
+                                <br>
+                                <form action="add_song" method="post">
+                                    <input type="hidden" name="add_song" value="{{ track['id'] }}">
+                                    <input type="submit" name="add" value="Add Song To Playlist">
+                                </form>
+                                <br>
+                                <form action="add_liked_song" method="post">
+                                    <input type="hidden" name="add_liked_song" value="{{ track['id'] }}">
+                                    <input type="submit" name="like" value="Like Song">
+                                </form>
+                            
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="playlist">
+            <div class="navigationBody">
+                <div class="navigationRow"> 
+                    <a href="{{ url_for('get_album') }}"><div class="navigationObject"> <p><b>Albums</b></p> </div> </a>
+                    <a href="{{ url_for('get_playlist') }}"> <div class="navigationObject"> <p><b>Playlists</b></p> </div> </a>
+                    <a href="{{ url_for('liked_songs') }}"> <div class="navigationObject"> <p><b>Liked Songs</b></p> </div> </a>
+                </div>
+                <div class="navigationRow"> 
+                    <a href="{{ url_for('library') }}"> <div class = "navigationObject"> <p><b>Lbrary</b></p> </div> </a>
+                    <a href="{{ url_for('homepage') }}"> <div class = "navigationObject"> <p><b>Homepage</b></p> </div> </a>
+                    <a href="{{ url_for('logout') }}"> <div class = "navigationObject"> <p><b>Logout</b></p> </div> </a> 
+                </div>
+                <br>
+                <div class="searchSongSearchSong">
+                    <form action="{{ url_for('search_song') }}" method="get">
+                        <label for="search">Search for a song:</label>
+                        <input type="text" id="search" name="query" placeholder="Enter song name">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>     
+            </div>
+        </div>
+    </div>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}" ></script>
+</body>
+</html>

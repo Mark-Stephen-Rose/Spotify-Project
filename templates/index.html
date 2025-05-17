@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Player</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="spotify-player"></div>
+        <button id="playerbutton" access_token="{{ access_token }}">ClickToStartPlayer</button>
+        <button id="startResumeButton" onclick="startResumePlayback(player)">Start/Resume Playback</button>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}" ></script>
+</body>
+</html>

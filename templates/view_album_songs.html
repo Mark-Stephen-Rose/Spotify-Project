@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = 'stylesheet'  href = "{{ url_for('static', filename='index.css') }}" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Album Tracks</title>
+</head>
+<body class = "backgroundcolor">
+    <h1 class = "centertitle">Album Tracks</h1>
+    <div class="box-container">
+        <div class="box">
+            {% for track in album %}
+                <div class="track">
+                    <div class="track_details">
+                        <p><b>Name:</b> {{ track['name'] }}</p>
+                        <p><b>Duration:</b> {{ track.duration_ms // 60000 }} minutes {{ (track.duration_ms % 60000) // 1000 }} seconds</p>
+                        <div class="spotify-player"></div>
+                        <button class="playerbutton" access_token="{{ access_token }}" track_id="{{ track['id'] }}">Play/Pause</button>
+                        <!-- <button id="startResumeButton" onclick="startResumePlayback(player)">Play/Pause</button>  -->
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class = "library">
+    <div class="navigationBody">
+    <div class="navigationRow"> 
+        <a href="{{ url_for('get_album') }}"><div class = "navigationObject"> <p><b>Albums</b></p> </div> </a>
+        <a href="{{ url_for('get_playlist') }}"> <div class = "navigationObject"> <p><b>Playlists</b></p> </div> </a>
+        <a href="{{ url_for('liked_songs') }}"> <div class = "navigationObject"> <p><b>Liked Songs</b></p> </div> </a>
+    </div>
+    <div class="navigationRow"> 
+        <a href="{{ url_for('library') }}"> <div class = "navigationObject"> <p><b>Library</b></p> </div> </a>
+        <a href="{{ url_for('homepage') }}"> <div class = "navigationObject"> <p><b>Homepage</b></p> </div> </a>
+        <a href="{{ url_for('logout') }}"> <div class = "navigationObject"> <p><b>Logout</b></p> </div> </a>    
+    </div>
+        <div class = "searchSongViewAlbum">
+        <form action="{{ url_for('search_song') }}" method="get">
+            <label for="search"><b>Search for a song:</b></label>
+            <input type="text" id="search" name="query" placeholder="Enter song name">
+            <button type="submit">Search</button>
+        </form>
+        </div>  
+        </div>
+    </div>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}" ></script>
+</body>
+</html>
+ 

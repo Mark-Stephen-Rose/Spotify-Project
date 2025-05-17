@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Home Page</title>
+</head>
+<body class="colors">
+  <div class = "homepage">
+  <div class="homeBody">
+    <h1>Home</h1>
+
+      <div class="navigationBody">
+        <div class="navigationRow">
+          <a href="{{ url_for('get_album')}}" class="navigationObject"><b>Albums</b></a>
+          <a href="{{ url_for('get_playlist') }}" class="navigationObject"><b>Playlists</b></a>
+          <a href="{{ url_for('liked_songs') }}" class="navigationObject"><b>Liked Songs</a>
+        </div>
+        <div class="navigationRow">
+          <a href="{{ url_for('homepage') }}" class="navigationObject"><b>Homepage</b></a>
+          <a href="{{ url_for('library') }}" class="navigationObject"><b>Library</b></a>
+          <a href="{{ url_for('logout') }}" class="navigationObject"><b>Logout</b></a>
+        </div>
+        <br>
+        <div class="homeSearchSong">
+          <form action="{{ url_for('search_song') }}" method="get">
+            <label for="search"><b>Search for a song:</b></label>
+            <input type="text" id="search" name="query" placeholder="Enter song name">
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+  </div>
+  </div>
+  <script src="{{ url_for('static', filename='login.js') }}" ></script>
+</body>
+</html>

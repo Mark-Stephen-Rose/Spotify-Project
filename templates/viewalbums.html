@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>View Albums</title>
+</head>
+<body class="backgroundcolor">
+    <div class="homeBody">
+    <div class="viewalbums">
+    <h1 class = "centertitle">View Albums</h1>
+    <div class="maincontent">
+    <ul>
+        {% for album in albums %}
+        <li>
+            <div class = "album-info-container">
+            <div class="album-info-box">
+            {% set album_image_url = get_album_image(album.album_id) %}
+                <img class = "albumimage" src="{{ album_image_url }}" alt="Album Image"><br>
+            <div>
+            Album Title:    {{ album.album_title }}<br>
+            Album Artist:   {{ album.album_artist }}<br>
+            Release Date:   {{ album.release_date }}<br>
+            Total Tracks:   {{ album.total_tracks }}<br>
+            <!-- <button id="pause">Pause</button>
+            <button id="next">Next Track</button>
+            <button id="previous">Previous Track</button> -->
+            <form id="form" action="view_album_songs" method="post">
+                <input type="hidden"  name="view_album_songs" value="{{ album.album_id }}" >
+                <input type="submit"   name="view"   value="View">
+            </form>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="library">
+    <div class="navigationBody">
+    <div class="navigationRow"> 
+        <a href="{{ url_for('get_album') }}"><div class = "navigationObject"> <p><b>Albums</b></p> </div> </a>
+        <a href="{{ url_for('get_playlist') }}"> <div class = "navigationObject"> <p><b>Playlists</b></p> </div> </a>
+        <a href="{{ url_for('liked_songs') }}"> <div class = "navigationObject"> <p><b>Liked Songs</b></p> </div> </a>
+    </div>
+    <div class="navigationRow">
+        <a href="{{ url_for('library') }}"> <div class = "navigationObject"> <p><b>Library</b></p> </div> </a> 
+        <a href="{{ url_for('homepage') }}"> <div class = "navigationObject"> <p><b>Homepage</b></p> </div> </a>
+        <a href="{{ url_for('logout') }}"> <div class = "navigationObject"> <p><b>Logout</b></p> </div> </a>    
+    </div>
+    <br>
+    <div class = "viewAlbumsSearchSong">
+    <form action="{{ url_for('search_song') }}" method="get">
+        <label for="search"><b>Search for a song:</b></label>
+        <input type="text" id="search" name="query" placeholder="Enter song name">
+        <button type="submit">Search</button>
+    </form>
+    </div>  
+    </div>
+    </div>
+    </div>
+</body>
+</html>

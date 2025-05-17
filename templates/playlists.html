@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = 'stylesheet'  href = "{{ url_for('static', filename='index.css') }}" />
+    <title>My Playlists</title>
+</head>
+<body class = "backgroundcolor">
+    <div class="homeBody">
+        <div class ="playlists">
+            <h1 class ="centertitle">My Playlists</h1>
+
+            <p>Add a Playlist</p>
+            <form id="form" action="add_playlist" method="post">
+                <input type="text" name="playlistname" placeholder=" Playlist Name">
+                <input type="submit" name="addplaylist" value="Add Playlist">
+            </form>
+        </div>
+    <br>
+    <br>
+    <div class="maincontent">
+    <ul>
+        {% for playlist in playlists %}
+            <li>
+                <div class = "playlistBody">
+                <!-- ID: {{ playlist.playlist_id }}<br> -->
+                    <div class = "playlistSubject">
+                    <b>Name: </b>{{ playlist.playlist_title }}<br>
+                    <b>Number of Songs: </b>{{ playlist.total_playlist_tracks }}<br>
+                    <b>Author: </b> {{username}}
+                    </div>
+                    <div class = "playlistGroupButtons">
+                        <div class = "playlistButtons">
+                        <form id="form" action="view_playlist" method="post">
+                            <input type="hidden"  name="view_playlist" value="{{ playlist.playlist_id }}" >
+                            <input type="submit"   name="view"   value="View">
+                        </form>
+                        </div>
+                        <div class = "playlistButtons">
+                        <form id="form" action="delete_playlist" method="post">
+                            <input type="hidden"  name="delete_playlist" value="{{ playlist.playlist_id }}" >
+                            <input type="submit"   name="delete"   value="Delete">
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    </div>
+
+    <div class="playlist">
+    <div class="navigationBody">
+    <div class="navigationRow"> 
+      <a href="{{ url_for('get_album') }}"><div class = "navigationObject"> <p><b>Albums</b></p> </div> </a>
+      <a href="{{ url_for('get_playlist') }}"> <div class = "navigationObject"> <p><b>Playlists</b></p> </div> </a>
+      <a href="{{ url_for('liked_songs') }}"> <div class = "navigationObject"> <p><b>Liked Songs</b></p> </div> </a>
+      </div>
+      <div class="navigationRow">  
+      <a href="{{ url_for('homepage') }}"> <div class = "navigationObject"> <p><b>Homepage</b></p> </div> </a>
+      <a href="{{ url_for('library') }}"> <div class = "navigationObject"> <p><b>Library</b></p> </div> </a>
+      <a href="{{ url_for('logout') }}"> <div class = "navigationObject"> <p><b>Logout</b></p> </div> </a>    
+      </div>
+      <br>
+      <div class = "playlistSearchSong">
+      <form action="{{ url_for('search_song') }}" method="get">
+        <label for="search"><b>Search for a song:</b></label>
+        <input type="text" id="search" name="query" placeholder="Enter song name">
+        <button type="submit">Search</button>
+      </form>
+      </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
