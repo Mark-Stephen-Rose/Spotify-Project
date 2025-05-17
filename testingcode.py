@@ -28,8 +28,8 @@ logging.basicConfig(level=logging.DEBUG, format=FORMAT)
 
 app = Flask(__name__)
 
-client_id = '6a24b0941eec4035b66312bb7c364119'
-client_secret = 'b338f31d41ca4cd294c0033701cc649b'
+client_id = '6a2***********************'
+client_secret = 'b33**********************************'
 redirect_uri = 'https://collectparking-spoonfinal-8000.codio.io/callback'
 scope = 'user-read-private user-read-email app-remote-control streaming user-modify-playback-state streaming playlist-read-private playlist-modify-private user-top-read user-library-read user-read-email user-modify-playback-state user-read-playback-state user-read-currently-playing user-read-private' 
 
