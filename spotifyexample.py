@@ -5,8 +5,8 @@ import spotipy
 
 app = Flask(__name__)
 
-os.environ['SPOTIPY_CLIENT_ID'] = 'f39f1871b646469b98ab1b3aa784b70e'
-os.environ['SPOTIPY_CLIENT_SECRET'] = '8007ef48e29e40e2a7b128a4752e9693'
+os.environ['SPOTIPY_CLIENT_ID'] = 'f39**********************'
+os.environ['SPOTIPY_CLIENT_SECRET'] = '800**********************'
 os.environ['SPOTIPY_REDIRECT_URI'] = 'https://collectparking-spoonfinal-8000.codio.io/callback'
 
 # Scopes define the permissions your app will have
