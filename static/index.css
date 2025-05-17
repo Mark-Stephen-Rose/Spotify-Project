@@ -1,0 +1,778 @@
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td
+{
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+a {text-decoration: none;}
+
+.likeSongButton
+{
+  float: text;
+  padding-left: 5px;
+}
+
+.playButton
+{
+  float: left;
+  margin-left: 346px;
+}
+
+.colors{
+  background-color: rgb(226, 226, 226);
+  color: rgb(43, 143, 230);
+}
+
+.addSongButton
+{
+  float: left;
+  margin-left: 290px;
+}
+
+.viewPlaylistNavigation
+{
+  margin-left: 150px;
+}
+
+.lefttext{
+  text-align: left;
+  font-size: 14pt;
+}
+
+.settingsBody
+{
+  border: 2px solid black;
+  text-align: center;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 240px;
+}
+
+.settingsBody input
+{
+  width: 30%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.settingsBody input:hover
+{
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+}
+
+.settingsBody .settingsObject
+{
+  border: 2px solid black;
+  margin-top: 18px;
+  text-align: center;
+  width: 29.3%;
+  margin-left: 212px;
+  margin-bottom: 10px;
+}
+
+.settingsBody .settingsObject:hover
+{
+  background-color: rgb(226, 226, 226);
+}
+
+.loginBody .Street
+{
+  margin-right: 35px;
+}
+
+.loginBody .City
+{
+  margin-right: 45px;
+}
+
+.loginBody .State
+{
+  margin-right: 235px;
+}
+
+.loginBody .State2
+{
+  margin-right: 235px;
+  display: inline-block;
+  text-align: right;
+}
+
+.loginBody .Zipcode
+{
+  margin-right: 18px;
+}
+
+.loginBody .Phone
+{
+  margin-left: 27px;
+}
+
+.loginBody .Email
+{
+  margin-right: 35px;
+}
+
+.loginBody .Username
+{
+  margin-right: 5px;
+}
+
+.loginBody .Password
+{
+  margin-right: 5px;
+}
+
+.viewalbumsongs .centertitle
+{
+    text-align: center;
+}
+
+.viewalbums .maincontent {
+    align-items: center;
+}
+
+.album-info-container {
+  display: flex; 
+  justify-content: space-between;
+  flex-wrap: wrap;   
+  margin-left: 350px; 
+  margin-right: 350px; 
+}
+
+.album-info-box {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.album-info-box img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.viewalbums ul
+{
+  list-style-type: none;
+  padding: 0px
+}
+
+.viewalbums .albumimage
+{
+  width: 100px;
+  height: auto; 
+  margin-right: 20px;
+}
+
+.songBox{
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  list-style-type: none;
+}
+
+.songBox input[type='submit'] {
+  height: 30px;
+  background-color: rgb(43, 143, 230);
+  color: white;
+  width: 15%;
+  font-size: 10pt;
+}
+
+.homeBody .maincontentSearchSong ul
+{
+  list-style-type: none;
+}
+
+.centertitle
+{
+  text-align: center;
+  color: rgb(43, 143, 230)  
+}
+
+.playlists 
+{
+  text-align: center
+}
+
+.playlistBody
+{
+  border: 2px solid black;
+  margin-top: 15px;
+  padding-bottom: 25px;
+  width: 55%;
+  margin: 0 auto;
+}
+
+.playlistSubject
+{
+  float: left;
+  padding-left: 100px;
+  padding-top: 10px;
+  font-size: 14pt;
+  background-color: rgb(226, 226, 226);
+}
+
+.playlistButtons
+{
+  padding-top: 10px;
+}
+
+.playlistGroupButtons
+{
+  padding-left: 600px;
+}
+
+.addBody
+{
+  border: 1px solid black;
+  margin-top: 15px;
+  padding-bottom: 30px;
+  width: 55%;
+  margin: 0 auto;
+  height: fit-content;
+  
+}
+
+.addSubject
+{
+  float: left;
+  padding-left: 100px;
+  padding-top: 10px;
+  font-size: 14pt;
+  background-color: rgb(226, 226, 226);
+}
+
+.addButtons
+{
+  padding-top: 10px;
+}
+
+.addGroupButtons
+{
+  padding-left: 600px;
+}
+
+.maincontent ul {
+  list-style-type: none;
+}
+
+.grid ul{
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.maincontent ul li {
+  list-style-type: none;
+  margin-bottom: 20px; 
+}
+
+.backgroundcolor{
+  background-color: rgb(226, 226, 226);
+}
+
+.playlist .navigationBody {
+  text-align: center; 
+  margin-left: 35px;
+}
+
+.playlist .navigationRow {
+  display: flex;
+  justify-content: center;
+}
+
+.playlist .navigationObject {
+  border: 2px solid black;
+  padding: 15px; 
+  margin: 5px;
+  text-align: center;
+  width: 200px; 
+  height: 50px;
+}
+
+.playlist .centeredNavigation {
+  margin-top: 20px;
+  width: 110%;
+}
+
+.playlist .centeredNavigation form{
+  border: 2px solid black;
+  padding: 10px;
+  margin-left: 450px;
+  margin-right: 450px;
+  align-content: center;
+}
+
+.playlist .centeredNavigation input[type="text"],
+.playlist .centeredNavigation button {
+  margin: 5px;
+}
+
+.playlist .centeredNavigation label {
+  margin-right: 10px;
+}
+
+.centertext{
+  text-align: center;
+}
+
+.nobulletpoints .maincontent ul{
+    list-style-type: none;
+}
+
+.library .maincontent {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  height: 325px;
+  color: black;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-right: 300px;
+}
+
+.library .maincontent .track_details {
+  break-inside: avoid;
+  
+}
+
+.library .maincontent ul {
+  list-style-type: none;
+  columns: 3; 
+  column-gap: 20px;
+}
+
+.library .maincontent li {
+  list-style-type: none;
+  margin-bottom: 20px; 
+}
+
+.library .centertitle
+{
+  text-align: center;
+}
+
+.library .navigationBody {
+  text-align: center; 
+}
+
+.library .navigationRow {
+  display: flex;
+  justify-content: center;
+}
+
+.library .navigationObject {
+  border: 2px solid black;
+  padding: 15px; 
+  margin: 5px;
+  text-align: center;
+  width: 200px; 
+  height: 50px;
+}
+
+.library .centeredNavigation {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.library .centeredNavigation form {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.library .centeredNavigation input[type="text"],
+.library .centeredNavigation button {
+  margin: 5px;
+}
+
+.library .centeredNavigation label {
+  margin-right: 10px;
+}
+
+.library .homeBody {
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.colors {
+  background-color: rgb(226, 226, 226);
+  color: rgb(43, 143, 230);
+}
+
+.homepage .homeBody .navigationObject {
+  border: 2px solid black;
+  width: 20%;
+}
+
+.homepage .homeBody {
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.homepage .maincontent {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  height: 300px;
+}
+
+.homepage .navigationBody {
+  width: 100%;
+}
+
+.homepage .navigationRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.homepage .navigationObject {
+  border: 2px solid black;
+  padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 5px;
+}
+
+.homepage .centeredNavigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.homepage .centeredNavigation form {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.homepage .centeredNavigation input[type="text"],
+.homepage .centeredNavigation button {
+  margin: 5px;
+}
+
+.homepage .centeredNavigation label {
+  margin-right: 10px;
+}
+
+.track_details button
+{
+    height: 30px;
+    background-color: rgb(43, 143, 230);
+    color: white;
+    width: 55%;
+    margin-right: 90px;
+    margin-bottom: 10px;
+}
+
+.track_details button:hover
+{
+    background-color: rgb(81, 160, 230);
+}
+
+.track_details input[type='submit']
+{
+    height: 30px;
+    background-color: rgb(43, 143, 230);
+    color: white;
+    width: 55%;
+}
+
+.track_details input[type='submit']:hover
+{
+    background-color: rgb(81, 160, 230);
+}
+
+button
+{
+    height: 30px;
+    background-color: rgb(43, 143, 230);
+    color: white;
+    width: 15%;
+}
+
+button:hover
+{
+    background-color: rgb(81, 160, 230);
+}
+
+.playlistButtons input[type='submit']
+{
+  height: 30px;
+  background-color: rgb(43, 143, 230);
+  color: white;
+  width: 90%;
+  font-size: 10pt;
+}
+
+.playlistButtons input[type='submit']:hover
+{
+    background-color: rgb(81, 160, 230);
+}
+
+.playlists input[type='submit']
+{
+    height: 30px;
+    background-color: rgb(43, 143, 230);
+    color: white;
+    width: 7%;
+}
+
+.playlists input[type='submit']:hover
+{
+    background-color: rgb(81, 160, 230);
+}
+
+.navigationRow a
+{
+    color: black
+}
+
+.navigationRow a:hover
+{
+    background-color: rgb(214, 214, 214);
+}
+
+.navigationObject a
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(214, 214, 214);
+}
+
+
+.box-container {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.track .playing {
+    background-color: rgba(183, 61, 214, 0.769); 
+}
+
+.playlistSearchSong
+{
+    margin-right: 330px;
+    margin-left: 330px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.viewPlaylistSearchSong
+{
+    margin-right: 150px;
+    margin-left: 150px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.playlistGroupButtonsViewPlaylist
+{
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.homeSearchSong
+{
+    margin-right: 165px;
+    margin-left: 165px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.likedTracksSearchSong
+{
+    margin-right: 155px;
+    margin-left: 155px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.viewAlbumsSearchSong
+{
+    margin-right: 375px;
+    margin-left: 375px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.librarySearchSong
+{
+    margin-right: 375px;
+    margin-left: 375px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.searchSongSearchSong
+{
+  margin-right: 365px;
+  margin-left: 365px;
+  border: 2px solid black;
+  padding: 15px
+}
+
+.searchSongViewAlbum
+{
+    margin-right: 365px;
+    margin-left: 365px;
+    border: 2px solid black;
+    padding: 15px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .loginBody a
+{
+  text-decoration: none;
+  color: black;
+  text-decoration: underline;
+}
+
+.loginBody
+{
+  border: 2px solid black;
+  text-align: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 240px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.loginBody p
+{
+  margin-bottom: 0px;
+  font-size: 13pt;
+}
+
+.loginBody .noncentered
+{
+  margin-right: 100px;
+  margin-bottom: 5px;
+}
+
+.loginBody input
+{
+  border: 1px solid black;
+}
+
+.loginBody input[type='submit']
+{
+  text-align: center;
+  border: double solid black;
+  height: 30px;
+  background-color: black;
+  color: white;
+  width: 20%;
+  margin-top: 5px;
+  font-size: 12pt;
+}
+
+.loginBody input[type='submit']:hover
+{
+  background-color: rgb(69, 69, 69);
+}
+
+.loginBody input[type='text']
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.loginBody input[type='tel']
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.loginBody input[type='email']
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.loginBody input[type='text']:hover
+{
+  background-color: rgb(242, 242, 242);
+}
+
+.loginBody input[type='password']
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.loginBody input[type='password']:hover
+{
+  background-color: rgb(242, 242, 242);
+} */
