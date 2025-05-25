@@ -1,19 +1,47 @@
-# Creating Python programs in Codio
+# Full-Stack Music Streaming Application
 
-### Make a new file
-Use **File > New File...** or right-click in the file tree to create a new file. You can right-click in the file tree to rename or delete files.
+This is a full-featured music streaming web application built using Flask (Python) for the backend, a relational SQL database for persistent storage, and HTML, CSS, and JavaScript for a responsive and interactive frontend. The platform enables users to browse albums and playlists, stream music, manage their personal library, and perform account-level operations such as login and playlist creation.
 
-As Codio detects which file is in focus, simply put your cursor into whichever code editor you want to run.
+## Tech Stack
+- Frontend: HTML5, CSS3, JavaScript
+- Backend: Python (Flask)
+- Database: SQL with DAO (Data Access Object) architecture
+- Audio Playback: HTML5 Audio API with custom JavaScript controls
 
-### Run your code
-Use the Run button (that looks like a Rocketship) to Run the file your cursor is in.
+## Features
+- User authentication with registration and login
+- Streaming support for songs organized into albums and playlists
+- Playlist creation, editing, and deletion
+- Liked songs library and user-specific music collections
+- Real-time audio playback with autoplay, iteration, and dynamic controls
+- Structured backend architecture with modular DAO design
 
-### Debug your code
-Use the "Debug Current File" on the far right of the top menu bar to launch the debugger targeting the file your cursor is in.
+## Project Structure
+- `*.py` – Backend routes, data models, and DAO modules
+- `/templates` – Jinja2 HTML templates rendered by Flask
+- `/static` – JavaScript and CSS files for frontend behavior and styling
+- `*.sql` – Database schema and test data scripts
 
-### Reconfigure your Panels for easier development
-Use the **View > Panels** menu on the top tool bar to segment your screen.
+## License
+This project is licensed under the MIT License.
+MIT License
 
-Simply drag the tab of the file or terminal (the part with the name) you want to move into the new panel.
+Copyright (c) 2025 Mark Rose and Azia Koser
 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
